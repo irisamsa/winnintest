@@ -1,5 +1,5 @@
 Cypress.Commands.add('visitWikipedia', () => {
-    cy.visit('')
+    cy.visit('https://www.wikipedia.org/')
 })
 
 Cypress.Commands.add('elementExistsByWiki', (id) => {
