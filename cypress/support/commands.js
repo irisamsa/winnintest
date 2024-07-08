@@ -7,6 +7,8 @@ Cypress.Commands.add('elementExistsByWiki', (id) => {
 })
 
 Cypress.Commands.add('search', (term) => {
+    cy.get('#searchLanguage').select('pt');
+    cy.get('#searchLanguage').should('have.value', 'pt');
     cy.get('input[name="search"]').type(`${term}{enter}`)
 })
 

@@ -28,7 +28,7 @@ describe('Testes E2E na página inicial da Wikipedia', () => {
   it('deve buscar por "Brasil" e verificar os blocos de conteúdo principais', () => {
     cy.search('Brasil')
     
-    cy.url({ timeout: 10000 }).should('include', '/wiki/Brasil')
+    cy.url().should('include', '/wiki/Brasil')
 
     cy.get('#firstHeading').should('contain', 'Brasil')
     cy.get('#mw-content-text').should('be.visible')
