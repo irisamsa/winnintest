@@ -27,4 +27,9 @@ jobs:
       run: npm install
 
     - name: Run Cypress tests
-      run: npm run cy:run
+      run: npm run cy:run -- --record --key=$YOUR_RECORD_KEY
+      env:
+        CYPRESS_baseUrl: https://www.wikipedia.org/
+        CYPRESS_record: true
+        CYPRESS_projectId: $YOUR_PROJECT_ID  # Se necessário para gravação no Cypress Dashboard
+        CYPRESS_group: $YOUR_GROUP_NAME      

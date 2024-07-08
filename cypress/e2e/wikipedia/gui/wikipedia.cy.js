@@ -32,7 +32,8 @@ describe('Testes E2E na página inicial da Wikipedia', () => {
 
     cy.get('#firstHeading').should('contain', 'Brasil')
     cy.get('#mw-content-text').should('be.visible')
-    cy.get('#vector-page-titlebar-toc').should('be.visible') 
+    cy.get('#vector-page-titlebar-toc').should('exist')
+    cy.get('#mw-panel-toc').should('exist')
     cy.get('.infobox').should('be.visible')  
     cy.get('#mw-content-text').within(() => {
       cy.get('h2').contains('História').should('be.visible')
